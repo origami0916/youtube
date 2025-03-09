@@ -51,7 +51,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/api/placeholder/1920/1080');
+            background-image: url('./images/header-bg.jpg');
             background-size: cover;
             background-position: center;
             filter: brightness(0.5);
@@ -298,6 +298,13 @@
             justify-content: center;
             font-size: 0.8rem;
             color: var(--medium-gray);
+            overflow: hidden;
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .story-content {
@@ -821,7 +828,7 @@
             <div class="stories-container">
                 <div class="story-card animate-fade-in delay-100">
                     <div class="story-image">
-                        <p>【人型イラスト】<br>Aさん（30代男性・会社員）<br>サイズ: 400x300px</p>
+                        <img src="./images/person-a.jpg" alt="Aさん（30代男性・会社員）">
                     </div>
                     <div class="story-content">
                         <div class="story-person">Aさん（30代男性・会社員）</div>
@@ -832,7 +839,7 @@
                 
                 <div class="story-card animate-fade-in delay-200">
                     <div class="story-image">
-                        <p>【人型イラスト】<br>Bさん（20代女性・主婦）<br>サイズ: 400x300px</p>
+                        <img src="./images/person-b.jpg" alt="Bさん（20代女性・主婦）">
                     </div>
                     <div class="story-content">
                         <div class="story-person">Bさん（20代女性・主婦）</div>
@@ -843,7 +850,7 @@
                 
                 <div class="story-card animate-fade-in delay-300">
                     <div class="story-image">
-                        <p>【人型イラスト】<br>Cさん（40代男性・個人事業主）<br>サイズ: 400x300px</p>
+                        <img src="./images/person-c.jpg" alt="Cさん（40代男性・個人事業主）">
                     </div>
                     <div class="story-content">
                         <div class="story-person">Cさん（40代男性・個人事業主）</div>
