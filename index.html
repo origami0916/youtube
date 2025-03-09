@@ -32,16 +32,19 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px; /* コンテナの左右余白を増やす */
         }
         
         /* Header Styles */
         header {
             position: relative;
             color: var(--white);
-            padding: 30px 0;
+            padding: 60px 0; /* 上下のパディングを増やす */
             text-align: center;
             overflow: hidden;
+            min-height: 80vh; /* ビューポートの高さの80%を最低限の高さに設定 */
+            display: flex;
+            align-items: center;
         }
         
         header::before {
@@ -71,7 +74,7 @@
         }
         
         .logo {
-            margin-bottom: 20px;
+            margin-bottom: 40px; /* ロゴ下の余白を増やす */
             animation: pulse 2s infinite;
             position: relative;
             z-index: 1;
@@ -84,43 +87,46 @@
         }
         
         .play-button {
-            width: 60px;
-            height: 60px;
+            width: 70px; /* ボタンサイズを大きく */
+            height: 70px;
             background-color: var(--white);
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
         
         .play-button svg {
-            width: 24px;
-            height: 24px;
+            width: 30px; /* アイコンサイズを大きく */
+            height: 30px;
             fill: var(--youtube-red);
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem; /* フォントサイズを大きく */
             font-weight: 900;
-            margin-bottom: 15px;
-            line-height: 1.2;
+            margin-bottom: 25px;
+            line-height: 1.3;
             position: relative;
             z-index: 1;
+            max-width: 800px; /* 最大幅を設定して読みやすく */
+            margin-left: auto;
+            margin-right: auto;
         }
         
         h2 {
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 40px; /* 下の余白を増やす */
             position: relative;
             z-index: 1;
         }
         
         .highlight {
             background-color: rgba(255, 255, 255, 0.2);
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 4px;
             font-weight: 700;
         }
@@ -129,33 +135,33 @@
             display: inline-block;
             background-color: var(--white);
             color: var(--youtube-red);
-            padding: 15px 30px;
+            padding: 18px 40px; /* ボタンのパディングを増やす */
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
-            margin-top: 20px;
+            font-size: 1.3rem;
+            margin-top: 30px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
             position: relative;
             z-index: 1;
         }
         
         .cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         }
         
         /* Pain Points Section */
         .pain-points {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background-color: var(--light-gray);
         }
         
         .section-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 50px; /* 下の余白を増やす */
             text-align: center;
             position: relative;
         }
@@ -163,7 +169,7 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
             width: 60px;
@@ -175,95 +181,97 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
+            gap: 30px; /* アイテム間の間隔を増やす */
+            margin-top: 60px;
         }
         
         .problem-item {
             background: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            width: calc(50% - 20px);
+            padding: 30px; /* パディングを増やす */
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            width: calc(50% - 30px);
             min-width: 300px;
             display: flex;
             align-items: start;
         }
         
         .problem-icon {
-            margin-right: 15px;
+            margin-right: 20px;
             color: var(--youtube-red);
             font-size: 24px;
             flex-shrink: 0;
         }
         
         .stat-container {
-            margin: 40px 0;
+            margin: 60px 0; /* 上下のマージンを増やす */
             text-align: center;
         }
         
         .stat-highlight {
             background-color: var(--highlight-yellow);
             display: inline-block;
-            padding: 15px 30px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 18px 35px;
+            border-radius: 12px;
+            margin-bottom: 30px;
             font-weight: 700;
-            font-size: 1.3rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.4rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transform: rotate(-1deg);
         }
         
         .solution-text {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            line-height: 1.8;
         }
         
         /* Benefits Section */
         .benefits {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background-color: var(--white);
         }
         
         .benefits-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 40px;
+            justify-content: center;
+            gap: 30px; /* アイテム間の間隔を増やす */
+            margin-top: 60px;
         }
         
         .benefit-card {
-            width: calc(33.33% - 20px);
+            width: calc(33.33% - 30px);
             min-width: 300px;
             margin-bottom: 30px;
-            padding: 30px;
+            padding: 35px; /* パディングを増やす */
             background-color: var(--light-gray);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
         
         .benefit-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
         
         .benefit-icon {
-            font-size: 40px;
+            font-size: 45px;
             color: var(--youtube-red);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .benefit-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         /* Success Stories */
         .success-stories {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background: linear-gradient(to right, #f5f5f5 0%, #ffffff 100%);
         }
         
@@ -271,27 +279,27 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px; /* アイテム間の間隔を増やす */
+            margin-top: 60px;
         }
         
         .story-card {
-            width: calc(33.33% - 30px);
+            width: calc(33.33% - 40px);
             min-width: 300px;
             background-color: var(--white);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
         }
         
         .story-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
         
         .story-image {
-            height: 200px;
+            height: 220px;
             background-color: #ddd;
             display: flex;
             align-items: center;
@@ -308,75 +316,76 @@
         }
         
         .story-content {
-            padding: 25px;
+            padding: 30px; /* パディングを増やす */
         }
         
         .story-person {
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
             color: var(--youtube-red);
         }
         
         .story-result {
             font-weight: 700;
-            margin: 15px 0;
+            margin: 20px 0;
             color: var(--success-green);
         }
         
         /* Instructor Profile */
         .instructor {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background-color: var(--light-gray);
         }
         
         .instructor-container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 30px;
+            padding: 40px; /* パディングを増やす */
             background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
         
         .instructor-name {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--dark-gray);
         }
         
         .instructor-title {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--youtube-red);
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         .instructor-credentials {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         .credential-item {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             align-items: start;
         }
         
         .credential-icon {
-            margin-right: 10px;
+            margin-right: 15px;
             color: var(--success-green);
         }
         
         .instructor-quote {
             border-left: 3px solid var(--youtube-red);
-            padding-left: 20px;
+            padding-left: 25px;
             font-style: italic;
-            margin-top: 20px;
+            margin-top: 30px;
+            line-height: 1.8;
         }
         
         /* Bonuses Section */
         .bonuses {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background-color: #FFF9C4;
         }
         
@@ -384,68 +393,69 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px; /* アイテム間の間隔を増やす */
+            margin-top: 60px;
         }
         
         .bonus-card {
-            width: calc(33.33% - 30px);
+            width: calc(33.33% - 40px);
             min-width: 300px;
             background-color: var(--white);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 35px; /* パディングを増やす */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             position: relative;
             overflow: hidden;
         }
         
         .bonus-label {
             position: absolute;
-            top: 20px;
-            right: -35px;
+            top: 25px;
+            right: -40px;
             background-color: var(--youtube-red);
             color: var(--white);
-            padding: 5px 40px;
+            padding: 6px 45px;
             transform: rotate(45deg);
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 700;
         }
         
         .bonus-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: var(--dark-gray);
         }
         
         .bonus-description {
             margin-bottom: 15px;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.7;
         }
         
         /* Paid Course Section */
         .paid-course {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background: linear-gradient(135deg, var(--dark-gray) 0%, #555555 100%);
             color: var(--white);
         }
         
         .course-features {
-            margin: 40px 0;
+            margin: 60px 0;
         }
         
         .course-recommendation {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px; /* アイテム間の間隔を増やす */
+            margin-top: 60px;
         }
         
         .recommended-for, .not-recommended-for {
             flex: 1;
             min-width: 300px;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 35px; /* パディングを増やす */
+            border-radius: 12px;
         }
         
         .recommended-for {
@@ -459,15 +469,15 @@
         }
         
         .recommendation-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
         }
         
         .recommendation-title svg {
-            margin-right: 10px;
+            margin-right: 15px;
         }
         
         .recommendation-list {
@@ -475,9 +485,10 @@
         }
         
         .recommendation-list li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
+            line-height: 1.7;
         }
         
         .recommendation-list li::before {
@@ -485,106 +496,121 @@
             color: var(--white);
             font-weight: bold;
             display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+            width: 1.5em;
+            margin-left: -1.5em;
         }
         
         /* Registration Section */
         .registration {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             text-align: center;
             background-color: var(--light-gray);
         }
         
         .schedule-details {
-            margin: 30px 0;
-            padding: 20px;
+            margin: 40px 0;
+            padding: 30px; /* パディングを増やす */
             background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             display: inline-block;
         }
         
         .schedule-item {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-weight: 500;
+            font-size: 1.1rem;
         }
         
         .schedule-icon {
-            margin-right: 10px;
+            margin-right: 15px;
             color: var(--youtube-red);
         }
         
         .limited-seats {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-style: italic;
-            margin-top: 20px;
+            margin-top: 25px;
             color: var(--medium-gray);
         }
         
         /* FAQ Section */
         .faq {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background-color: var(--white);
         }
         
         .faq-container {
             max-width: 800px;
-            margin: 40px auto 0;
+            margin: 60px auto 0;
         }
         
         .faq-item {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
         }
         
         .faq-question {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             align-items: start;
         }
         
         .question-icon {
             color: var(--youtube-red);
-            margin-right: 10px;
+            margin-right: 15px;
             font-weight: 700;
         }
         
         .faq-answer {
-            padding-left: 25px;
+            padding-left: 30px;
+            line-height: 1.7;
         }
         
         /* Testimonial */
         .testimonial {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             background-color: var(--light-gray);
         }
         
         .testimonial-content {
             max-width: 800px;
             margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1.15rem;
+            line-height: 1.9;
         }
         
         .testimonial-paragraph {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         /* Footer CTA */
         .footer-cta {
-            padding: 60px 0;
+            padding: 100px 0; /* パディングを増やす */
             text-align: center;
             background: linear-gradient(135deg, var(--youtube-red) 0%, #CC0000 100%);
             color: var(--white);
         }
         
+        .footer-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+        
+        .footer-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
@@ -600,13 +626,51 @@
         .delay-500 { animation-delay: 0.5s; }
         
         /* Responsive Styles */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
             
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 25px;
+            }
+            
+            header {
+                padding: 50px 0;
+                min-height: 70vh;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                padding: 0 15px;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .pain-points, 
+            .benefits, 
+            .success-stories, 
+            .instructor, 
+            .bonuses, 
+            .paid-course, 
+            .registration, 
+            .faq, 
+            .testimonial, 
+            .footer-cta {
+                padding: 70px 0;
             }
             
             .problem-item,
@@ -614,6 +678,89 @@
             .story-card,
             .bonus-card {
                 width: 100%;
+                margin-bottom: 25px;
+            }
+            
+            .problems-list,
+            .benefits-container,
+            .stories-container,
+            .bonus-cards {
+                gap: 25px;
+            }
+            
+            .cta-primary {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .stat-highlight {
+                font-size: 1.2rem;
+                padding: 15px 25px;
+            }
+            
+            .solution-text {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            header {
+                padding: 40px 0;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .problem-item,
+            .benefit-card,
+            .story-card,
+            .instructor-container,
+            .bonus-card,
+            .schedule-details {
+                padding: 25px;
+            }
+            
+            .story-image {
+                height: 180px;
+            }
+            
+            .story-content,
+            .faq-container {
+                padding: 20px;
+            }
+            
+            .instructor-name {
+                font-size: 1.6rem;
+            }
+            
+            .instructor-title {
+                font-size: 1.1rem;
+            }
+            
+            .footer-cta h3 {
+                font-size: 1.6rem;
+            }
+            
+            .footer-cta p {
+                font-size: 1rem;
             }
         }
         
@@ -633,8 +780,8 @@
         /* Custom Effects */
         .highlight-box {
             border: 2px solid var(--youtube-red);
-            border-radius: 5px;
-            padding: 2px 5px;
+            border-radius: 6px;
+            padding: 3px 8px;
             font-weight: 700;
             display: inline-block;
         }
@@ -643,7 +790,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 40px 0;
+            margin: 50px 0;
         }
         
         .flow-item {
@@ -655,16 +802,16 @@
         .flow-item:not(:last-child)::after {
             content: '→';
             position: absolute;
-            right: -10px;
+            right: -15px;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 24px;
+            font-size: 28px;
             color: var(--youtube-red);
         }
         
         .flow-icon {
-            font-size: 30px;
-            margin-bottom: 10px;
+            font-size: 35px;
+            margin-bottom: 15px;
             color: var(--youtube-red);
         }
     </style>
@@ -680,8 +827,8 @@
                     </svg>
                 </div>
             </div>
-            <h1 class="animate-fade-in">挫折者続出のYouTube攻略、<span class="highlight">最短最速</span>で突破する秘訣を無料で公開</h1>
-            <h2 class="animate-fade-in delay-200">月<span class="highlight">100万円</span>稼ぐYouTuberへの道筋が3ヶ月で見えてくる</h2>
+            <h1 class="animate-fade-in">YouTube攻略の<span class="highlight">最短ルート</span>を公開</h1>
+            <h2 class="animate-fade-in delay-200">3ヶ月で<span class="highlight">月収100万円</span>を目指す</h2>
             <a href="#registration" class="cta-primary animate-fade-in delay-400">無料相談会に申し込む</a>
         </div>
     </header>
@@ -689,7 +836,7 @@
     <!-- Pain Points Section -->
     <section class="pain-points">
         <div class="container">
-            <h3 class="section-title animate-fade-in">あなたは今、このような悩みを抱えていませんか？</h3>
+            <h3 class="section-title animate-fade-in">あなたのこんな悩みを解決します</h3>
             
             <div class="problems-list">
                 <div class="problem-item animate-fade-in delay-100">
@@ -698,7 +845,7 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <div>何度もチャンネルを作り直しているのに結果が出ない</div>
+                    <div>チャンネル登録者が増えない</div>
                 </div>
                 
                 <div class="problem-item animate-fade-in delay-200">
@@ -707,7 +854,7 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <div>撮影や編集に時間がかかりすぎて継続できない</div>
+                    <div>動画制作に時間がかかりすぎる</div>
                 </div>
                 
                 <div class="problem-item animate-fade-in delay-300">
@@ -716,7 +863,7 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <div>他のクリエイターと差別化できずに埋もれている</div>
+                    <div>他のクリエイターと差別化できない</div>
                 </div>
                 
                 <div class="problem-item animate-fade-in delay-400">
@@ -725,13 +872,13 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <div>投稿しても視聴者数が増えない</div>
+                    <div>収益化の条件を達成できない</div>
                 </div>
             </div>
             
             <div class="stat-container animate-fade-in delay-500">
-                <div class="stat-highlight">多くの人がYouTubeを始めるものの、9割以上が3ヶ月以内に挫折しています。</div>
-                <p class="solution-text">なぜなら、「正しい方法」を知らないまま、膨大な時間とエネルギーを費やしてしまうからです。<br>しかし、YouTubeのアルゴリズムを理解し、<span class="highlight-box">戦略的にチャンネルを設計</span>することで、あなたも最短ルートで成功できるのです。</p>
+                <div class="stat-highlight">YouTubeを始めた人の9割が3ヶ月以内に挫折</div>
+                <p class="solution-text">「正しい方法」を知らないまま時間を浪費しているからです。<br>アルゴリズムを理解し<span class="highlight-box">戦略的にチャンネル設計</span>すれば、最短で成功できます。</p>
             </div>
         </div>
     </section>
@@ -739,10 +886,8 @@
     <!-- Benefits Section -->
     <section class="benefits">
         <div class="container">
-            <h3 class="section-title animate-fade-in">【最短最速YOUTUBE攻略講座 無料相談会】のご案内</h3>
-            <p class="text-center mb-40 animate-fade-in delay-100">この無料相談会では、YouTube攻略の最新戦略と、あなた専用のチャンネル成長プランをお届けします。</p>
+            <h3 class="section-title animate-fade-in">【無料相談会】で学べること</h3>
             
-            <h4 class="text-center mb-20 animate-fade-in delay-200">＜無料相談会で学べること＞</h4>
             <div class="benefits-container">
                 <div class="benefit-card animate-fade-in delay-100">
                     <div class="benefit-icon">
@@ -750,8 +895,8 @@
                             <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <h5 class="benefit-title">チャンネル設計から一貫した戦略の立て方</h5>
-                    <p>再生数や登録者数を最大化するためのチャンネル設計の基本と、長期的な成功に向けた戦略立案の方法を学びます。</p>
+                    <h5 class="benefit-title">最適なチャンネル設計と戦略立案</h5>
+                    <p>再生数や登録者数を最大化するための長期的な成功戦略を学べます。</p>
                 </div>
                 
                 <div class="benefit-card animate-fade-in delay-200">
@@ -760,8 +905,8 @@
                             <path d="M15 1H9V3H15V1ZM11 14H13V8H11V14ZM19.03 7.39L20.45 5.97C20.02 5.46 19.55 4.98 19.04 4.56L17.62 5.98C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13C3 17.97 7.02 22 12 22C16.98 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39ZM12 20C8.13 20 5 16.87 5 13C5 9.13 8.13 6 12 6C15.87 6 19 9.13 19 13C19 16.87 15.87 20 12 20Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <h5 class="benefit-title">たった1時間で質の高い動画を完成させる効率的なワークフロー</h5>
-                    <p>時間をかけずに質の高いコンテンツを制作するための効率的な撮影・編集テクニックとワークフロー最適化の秘訣を公開します。</p>
+                    <h5 class="benefit-title">1時間で高品質な動画を制作する方法</h5>
+                    <p>効率的な撮影・編集テクニックとワークフロー最適化の秘訣を伝授します。</p>
                 </div>
                 
                 <div class="benefit-card animate-fade-in delay-300">
@@ -770,8 +915,8 @@
                             <path d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <h5 class="benefit-title">あなたの強みを活かしたニッチ市場でのポジショニング戦略</h5>
-                    <p>競争の少ないニッチ市場を見つけ、あなた独自の強みを活かして視聴者の心を掴むポジショニング戦略を学びます。</p>
+                    <h5 class="benefit-title">あなたの強みを活かしたニッチ戦略</h5>
+                    <p>競争の少ない市場で視聴者の心を掴むポジショニング戦略を学べます。</p>
                 </div>
                 
                 <div class="benefit-card animate-fade-in delay-400">
@@ -780,8 +925,8 @@
                             <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <h5 class="benefit-title">最新のSEO対策とタイトル・サムネイル最適化の具体的手法</h5>
-                    <p>検索結果の上位に表示される動画タイトルやタグの設定方法、そしてクリック率を高めるサムネイルデザインのノウハウを解説します。</p>
+                    <h5 class="benefit-title">最新SEO対策とサムネイル最適化</h5>
+                    <p>上位表示される動画タイトルとクリック率の高いサムネイル作成法を解説します。</p>
                 </div>
                 
                 <div class="benefit-card animate-fade-in delay-100">
@@ -790,32 +935,22 @@
                             <path d="M23 12L19 8V11H10V13H19V16L23 12ZM1 18V6C1 4.89 1.9 4 3 4H15C16.1 4 17 4.89 17 6V9H15V6H3V18H15V15H17V18C17 19.1 16.1 20 15 20H3C1.9 20 1 19.1 1 18Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <h5 class="benefit-title">バイラル化しやすいコンテンツの作り方</h5>
-                    <p>視聴者の心を掴み、共有されやすいバイラルコンテンツを作るための心理的要素と具体的なテクニックを学びます。</p>
+                    <h5 class="benefit-title">バイラル動画の作り方</h5>
+                    <p>視聴者の心を掴み、共有されやすいバイラルコンテンツの制作テクニックを伝授します。</p>
                 </div>
                 
                 <div class="benefit-card animate-fade-in delay-200">
                     <div class="benefit-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 6H19V15H6V17C6 17.55 6.45 18 7 18H18L22 22V7C22 6.45 21.55 6 21 6ZM17 12V3C17 2.45 16.55 2 16 2H3C2.45 2 2 2.45 2 3V17L6 13H16C16.55 13 17 12.55 17 12Z" fill="#FF0000"/>
-                        </svg>
-                    </div>
-                    <h5 class="benefit-title">視聴者とのエンゲージメントを高める実践テクニック</h5>
-                    <p>コメントやコミュニティタブを活用して視聴者との関係を構築し、チャンネルの成長を加速させる方法を伝授します。</p>
-                </div>
-                
-                <div class="benefit-card animate-fade-in delay-300">
-                    <div class="benefit-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#FF0000"/>
                         </svg>
                     </div>
-                    <h5 class="benefit-title">収益化条件達成のための具体的なステップバイステップガイド</h5>
-                    <p>YouTubeパートナープログラムの条件を最短で達成するための具体的なロードマップとアクションプランを提供します。</p>
+                    <h5 class="benefit-title">収益化までの具体的ロードマップ</h5>
+                    <p>YouTubeパートナープログラムの条件を最短で達成するためのアクションプランを提供します。</p>
                 </div>
             </div>
             
-            <p class="text-center mb-20 animate-fade-in">相談会は完全無料ですが、<span class="highlight-box">すでに実践できる価値ある情報</span>をお持ち帰りいただけます。</p>
+            <p class="text-center mt-40 animate-fade-in">相談会は<span class="highlight-box">完全無料</span>ですが、すぐに実践できる価値ある情報をお持ち帰りいただけます。</p>
         </div>
     </section>
     
@@ -823,7 +958,6 @@
     <section class="success-stories">
         <div class="container">
             <h3 class="section-title animate-fade-in">受講生の成功事例</h3>
-            <p class="text-center mb-40 animate-fade-in delay-100">「相談会で教えてもらった方法を実践したところ...」</p>
             
             <div class="stories-container">
                 <div class="story-card animate-fade-in delay-100">
@@ -832,8 +966,8 @@
                     </div>
                     <div class="story-content">
                         <div class="story-person">Aさん（30代男性・会社員）</div>
-                        <p>副業として始めたYouTubeが本業の収入を超えました。会社を辞めて独立する決断ができたのも、この講座のおかげです。</p>
-                        <div class="story-result">チャンネル登録者は3ヶ月で50人から3,000人に増加。</div>
+                        <p>副業として始めたYouTubeが本業収入を超え、独立を決断。戦略を見直したことで急成長しました。</p>
+                        <div class="story-result">3ヶ月で登録者が50人→3,000人に増加</div>
                     </div>
                 </div>
                 
@@ -843,8 +977,8 @@
                     </div>
                     <div class="story-content">
                         <div class="story-person">Bさん（20代女性・主婦）</div>
-                        <p>子育ての合間に撮影していましたが、教えてもらった効率化テクニックで作業時間が半分になりました。その結果、週3本の投稿が可能になり、収益化条件もクリア！</p>
-                        <div class="story-result">AdSense収益が月3万円から15万円に増えました。</div>
+                        <p>効率化テクニックで作業時間が半減。子育ての合間に週3本の投稿が可能になり、収益化に成功しました。</p>
+                        <div class="story-result">収益が月3万円→15万円に増加</div>
                     </div>
                 </div>
                 
@@ -854,8 +988,8 @@
                     </div>
                     <div class="story-content">
                         <div class="story-person">Cさん（40代男性・個人事業主）</div>
-                        <p>専門知識を活かした動画づくりがわからず悩んでいましたが、相談会で方向性が明確になり、3ヶ月で業界内での認知度が大幅に上がりました。</p>
-                        <div class="story-result">教わった編集テクニックを使ったら、視聴維持率が1.5倍になり、仕事の依頼も増えています。</div>
+                        <p>専門知識を活かした動画づくりの方向性が明確になり、業界内での認知度が大幅に向上しました。</p>
+                        <div class="story-result">視聴維持率が1.5倍に向上し仕事の依頼も増加</div>
                     </div>
                 </div>
             </div>
@@ -878,7 +1012,7 @@
                                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#4CAF50"/>
                             </svg>
                         </div>
-                        <div>自身のチャンネルで複数ジャンルにおいて月間100万円以上の収益を達成</div>
+                        <div>複数ジャンルで月間100万円以上の収益を達成</div>
                     </div>
                     
                     <div class="credential-item">
@@ -887,7 +1021,7 @@
                                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#4CAF50"/>
                             </svg>
                         </div>
-                        <div>YouTubeパートナープログラムの認定アドバイザー</div>
+                        <div>YouTubeパートナープログラム認定アドバイザー</div>
                     </div>
                     
                     <div class="credential-item">
@@ -896,7 +1030,7 @@
                                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#4CAF50"/>
                             </svg>
                         </div>
-                        <div>これまで300人以上のクリエイターを成功に導いた実績</div>
+                        <div>300人以上のクリエイターを成功に導いた実績</div>
                     </div>
                     
                     <div class="credential-item">
@@ -905,21 +1039,12 @@
                                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#4CAF50"/>
                             </svg>
                         </div>
-                        <div>メディア出演やオンラインセミナーでの登壇多数</div>
-                    </div>
-                    
-                    <div class="credential-item">
-                        <div class="credential-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#4CAF50"/>
-                            </svg>
-                        </div>
-                        <div>YouTubeマーケティングに関する書籍の著者</div>
+                        <div>メディア出演・セミナー登壇多数</div>
                     </div>
                 </div>
                 
                 <div class="instructor-quote">
-                    「私自身、最初は全く再生されない動画を投稿し続け、挫折しかけました。しかし、アルゴリズムの仕組みと視聴者心理を徹底的に研究し、独自のメソッドを確立。今では自分だけでなく、多くの方々のチャンネル成長をサポートしています。」
+                    「私も最初は全く再生されない動画に挫折しかけました。アルゴリズムと視聴者心理を研究し独自メソッドを確立。今では多くの方々のチャンネル成長をサポートしています。」
                 </div>
             </div>
         </div>
@@ -929,24 +1054,23 @@
     <section class="bonuses">
         <div class="container">
             <h3 class="section-title animate-fade-in">無料相談会参加者限定特典</h3>
-            <p class="text-center mb-40 animate-fade-in delay-100">【期間限定】無料相談会にお申込みいただいた方全員に、以下の特典をプレゼント！</p>
             
             <div class="bonus-cards">
                 <div class="bonus-card animate-fade-in delay-100">
                     <div class="bonus-label">全員</div>
-                    <div class="bonus-title">「爆速チャンネル成長チェックリスト」PDF</div>
+                    <div class="bonus-title">爆速チャンネル成長チェックリスト</div>
                     <div class="bonus-description">チャンネル診断からコンテンツ改善まで、すぐに実践できる20のチェックポイント</div>
                 </div>
                 
                 <div class="bonus-card animate-fade-in delay-200">
                     <div class="bonus-label">先着30名</div>
-                    <div class="bonus-title">「サムネイル制作テンプレート10種」</div>
+                    <div class="bonus-title">サムネイル制作テンプレート10種</div>
                     <div class="bonus-description">クリック率を2倍に上げた実績のあるデザインテンプレート</div>
                 </div>
                 
                 <div class="bonus-card animate-fade-in delay-300">
                     <div class="bonus-label">質問者限定</div>
-                    <div class="bonus-title">「YouTube収益化ロードマップ」電子書籍</div>
+                    <div class="bonus-title">YouTube収益化ロードマップ</div>
                     <div class="bonus-description">収益化までの道のりを明確にするステップごとのガイド</div>
                 </div>
             </div>
@@ -957,9 +1081,9 @@
     <section class="paid-course">
         <div class="container">
             <h3 class="section-title animate-fade-in">有料講座へのご案内</h3>
-            <p class="text-center mb-20 animate-fade-in delay-100">無料相談会で基礎を学んだ後、さらに実践的なスキルを身につけたい方には有料の「最短最速YOUTUBE攻略講座」をご用意しています。</p>
+            <p class="text-center mb-40 animate-fade-in delay-100">無料相談会の後に、さらに実践的なスキルを身につけたい方向けの<br>「最短最速YOUTUBE攻略講座」をご用意しています。</p>
             
-            <p class="text-center mb-40 animate-fade-in delay-200">※無料相談会から1週間以内にお申込みの方限定<br>さらに、早期申込特典として<span class="highlight-box">「プロ仕様の動画編集プリセット集」（価値29,800円相当）</span>を無料進呈！</p>
+            <p class="text-center mb-40 animate-fade-in delay-200">早期申込特典：<span class="highlight-box">プロ仕様の動画編集プリセット集</span>（29,800円相当）</p>
             
             <div class="course-recommendation">
                 <div class="recommended-for animate-fade-in delay-300">
@@ -967,14 +1091,14 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#4CAF50"/>
                         </svg>
-                        この講座はこんな方におすすめです：
+                        こんな方におすすめ：
                     </div>
                     <ul class="recommendation-list">
-                        <li>本気でYouTubeで結果を出したいと考えている方</li>
-                        <li>自分の専門知識やスキルをコンテンツ化したい方</li>
-                        <li>効率的に作業して成果を出したい方</li>
-                        <li>長期的な収益源としてYouTubeを位置づけたい方</li>
-                        <li>実践的なアドバイスに基づいて行動できる方</li>
+                        <li>本気でYouTubeで結果を出したい方</li>
+                        <li>専門知識をコンテンツ化したい方</li>
+                        <li>効率的に成果を出したい方</li>
+                        <li>長期的な収益源を作りたい方</li>
+                        <li>実践的なアドバイスで行動できる方</li>
                     </ul>
                 </div>
                 
@@ -983,14 +1107,14 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#FF0000"/>
                         </svg>
-                        以下の方にはおすすめしません：
+                        おすすめしない方：
                     </div>
                     <ul class="recommendation-list">
-                        <li>すぐに大金を稼ぎたいと考えている方</li>
-                        <li>継続的な努力をする意志がない方</li>
-                        <li>基本的なPCスキルがなく、学ぶ意欲もない方</li>
+                        <li>すぐに大金を稼ぎたい方</li>
+                        <li>継続的な努力ができない方</li>
+                        <li>基本的なPCスキルがない方</li>
                         <li>批評や改善提案を受け入れられない方</li>
-                        <li>単なる趣味として動画投稿を楽しみたい方</li>
+                        <li>趣味として楽しみたいだけの方</li>
                     </ul>
                 </div>
             </div>
@@ -1000,7 +1124,7 @@
     <!-- Registration Section -->
     <section id="registration" class="registration">
         <div class="container">
-            <h3 class="section-title animate-fade-in">無料相談会に今すぐ申し込む</h3>
+            <h3 class="section-title animate-fade-in">無料相談会に申し込む</h3>
             
             <div class="schedule-details animate-fade-in delay-100">
                 <div class="schedule-item">
@@ -1009,7 +1133,7 @@
                             <path d="M19 4H18V2H16V4H8V2H6V4H5C3.89 4 3.01 4.9 3.01 6L3 20C3 21.1 3.89 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V10H19V20ZM19 8H5V6H19V8ZM17 13H12V18H17V13Z" fill="#FF0000"/>
                         </svg>
                     </span>
-                    <span>【日程】毎週土曜・日曜 13:00～14:30（90分）</span>
+                    <span>毎週土曜・日曜 13:00～14:30（90分）</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-icon">
@@ -1017,7 +1141,7 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="#FF0000"/>
                         </svg>
                     </span>
-                    <span>【場所】オンライン（Zoom）</span>
+                    <span>オンライン開催（Zoom）</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-icon">
@@ -1025,7 +1149,7 @@
                             <path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z" fill="#FF0000"/>
                         </svg>
                     </span>
-                    <span>【定員】各回10名限定</span>
+                    <span>各回10名限定</span>
                 </div>
             </div>
             
@@ -1044,50 +1168,50 @@
                 <div class="faq-item animate-fade-in delay-100">
                     <div class="faq-question">
                         <span class="question-icon">Q:</span>
-                        <span>YouTubeの経験がまったくなくても参加できますか？</span>
+                        <span>YouTubeの経験がなくても参加できますか？</span>
                     </div>
                     <div class="faq-answer">
-                        <strong>A:</strong> はい、まったく問題ありません。むしろゼロから正しい方法を学ぶことで、遠回りせずに成果を出せます。
+                        <strong>A:</strong> はい、むしろゼロから正しい方法を学ぶことで、遠回りせずに成果を出せます。
                     </div>
                 </div>
                 
                 <div class="faq-item animate-fade-in delay-200">
                     <div class="faq-question">
                         <span class="question-icon">Q:</span>
-                        <span>機材や編集ソフトはどのようなものが必要ですか？</span>
+                        <span>必要な機材は何ですか？</span>
                     </div>
                     <div class="faq-answer">
-                        <strong>A:</strong> スマートフォンとPCがあれば十分です。高価な機材は必要ありません。編集ソフトも無料のものから始められます。
+                        <strong>A:</strong> スマートフォンとPCがあれば十分です。高価な機材は必要ありません。
                     </div>
                 </div>
                 
                 <div class="faq-item animate-fade-in delay-300">
                     <div class="faq-question">
                         <span class="question-icon">Q:</span>
-                        <span>忙しくて時間がないのですが、それでも成果は出せますか？</span>
+                        <span>忙しくても成果は出せますか？</span>
                     </div>
                     <div class="faq-answer">
-                        <strong>A:</strong> はい。講座では時間効率を最大化する方法をお伝えします。週末だけの作業でも成果を出している受講生が多数います。
+                        <strong>A:</strong> はい。時間効率を最大化する方法をお伝えします。週末だけの作業でも成果を出している方が多数います。
                     </div>
                 </div>
                 
                 <div class="faq-item animate-fade-in delay-400">
                     <div class="faq-question">
                         <span class="question-icon">Q:</span>
-                        <span>相談会に参加しても、必ずしも有料講座に申し込む必要はありませんか？</span>
+                        <span>相談会後に有料講座への申込は必須ですか？</span>
                     </div>
                     <div class="faq-answer">
-                        <strong>A:</strong> もちろんです。無料相談会だけでも十分価値ある情報をお持ち帰りいただけます。ご納得いただけた場合のみ、有料講座をご検討ください。
+                        <strong>A:</strong> いいえ。無料相談会だけでも価値ある情報をお持ち帰りいただけます。納得した場合のみご検討ください。
                     </div>
                 </div>
                 
                 <div class="faq-item animate-fade-in delay-500">
                     <div class="faq-question">
                         <span class="question-icon">Q:</span>
-                        <span>個人的な質問や相談もできますか？</span>
+                        <span>個人的な質問もできますか？</span>
                     </div>
                     <div class="faq-answer">
-                        <strong>A:</strong> はい。相談会の中でQ&Aの時間を設けておりますので、あなたの状況に合わせたアドバイスを提供します。
+                        <strong>A:</strong> はい。Q&Aの時間を設けており、あなたの状況に合わせたアドバイスを提供します。
                     </div>
                 </div>
             </div>
@@ -1097,16 +1221,14 @@
     <!-- Testimonial Section -->
     <section class="testimonial">
         <div class="container">
-            <h3 class="section-title animate-fade-in">追伸</h3>
+            <h3 class="section-title animate-fade-in">講師からのメッセージ</h3>
             
             <div class="testimonial-content animate-fade-in delay-100">
-                <p class="testimonial-paragraph">私がYouTubeを始めたのは5年前のことです。当時は全く再生されず、登録者も増えず、3ヶ月で挫折しかけました。</p>
+                <p class="testimonial-paragraph">私がYouTubeを始めた5年前は全く再生されず、3ヶ月で挫折しかけました。しかし戦略を見直し、2ヶ月で登録者1,000人、半年で月収30万円を達成できました。</p>
                 
-                <p class="testimonial-paragraph">しかし、あるYouTuberのアドバイスをきっかけに戦略を一から見直したところ、わずか2ヶ月で登録者が1,000人を超え、半年後には月収30万円を達成することができました。</p>
+                <p class="testimonial-paragraph">今ではその経験を活かし、多くの方の「YouTube挫折」を防ぎ、最短ルートでの成功をサポートしています。</p>
                 
-                <p class="testimonial-paragraph">今ではその経験を活かし、多くの方々の「YouTube攻略の挫折」を防ぎ、最短ルートでの成功をサポートしています。</p>
-                
-                <p class="testimonial-paragraph">あなたのチャンネルにも必ず可能性があります。正しい方法を知り、実践するだけで、その扉は開かれるのです。</p>
+                <p class="testimonial-paragraph">あなたのチャンネルにも必ず可能性があります。正しい方法を知り、実践するだけで成功の扉が開かれます。</p>
                 
                 <p class="testimonial-paragraph">無料相談会でお会いできることを楽しみにしています。</p>
             </div>
@@ -1116,8 +1238,8 @@
     <!-- Footer CTA Section -->
     <section class="footer-cta">
         <div class="container">
-            <h3 class="animate-fade-in">あなたのYouTubeチャンネルを成功に導くファーストステップ</h3>
-            <p class="animate-fade-in delay-100">今すぐ無料相談会に申し込んで、YouTube攻略の最短ルートを掴みましょう</p>
+            <h3 class="animate-fade-in">YouTube成功への第一歩を踏み出そう</h3>
+            <p class="animate-fade-in delay-100">今すぐ無料相談会に申し込んで、最短ルートを掴みましょう</p>
             <a href="#registration" class="cta-primary animate-fade-in delay-200">無料相談会に申し込む</a>
         </div>
     </section>
