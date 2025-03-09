@@ -27,6 +27,11 @@
             line-height: 1.6;
             color: var(--dark-gray);
             background-color: var(--white);
+            background-image: 
+                radial-gradient(#f9f9f9 1px, transparent 1px),
+                radial-gradient(#f9f9f9 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
         }
         
         .container {
@@ -141,21 +146,42 @@
             font-weight: 700;
             font-size: 1.3rem;
             margin-top: 30px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
             position: relative;
             z-index: 1;
         }
         
         .cta-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            background-color: #fff;
+            color: #ff0000;
+        }
+
+        .cta-primary:active {
+            transform: translateY(-2px);
         }
         
         /* Pain Points Section */
         .pain-points {
             padding: 100px 0; /* パディングを増やす */
             background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-points::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 0, 0, 0.03) 0%, transparent 800px),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.03) 0%, transparent 800px);
+            pointer-events: none;
         }
         
         .section-title {
@@ -194,6 +220,12 @@
             min-width: 300px;
             display: flex;
             align-items: start;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .problem-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
         
         .problem-icon {
@@ -218,6 +250,11 @@
             font-size: 1.4rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transform: rotate(-1deg);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-highlight:hover {
+            transform: rotate(1deg);
         }
         
         .solution-text {
@@ -232,6 +269,25 @@
         .benefits {
             padding: 100px 0; /* パディングを増やす */
             background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(45deg, rgba(255, 0, 0, 0.02) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255, 0, 0, 0.02) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(255, 0, 0, 0.02) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(255, 0, 0, 0.02) 75%);
+            background-size: 60px 60px;
+            background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+            pointer-events: none;
         }
         
         .benefits-container {
@@ -250,11 +306,12 @@
             background-color: var(--light-gray);
             border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .benefit-card:hover {
             transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .benefit-icon {
@@ -273,6 +330,21 @@
         .success-stories {
             padding: 100px 0; /* パディングを増やす */
             background: linear-gradient(to right, #f5f5f5 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .success-stories::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 0, 0, 0.02) 50px, rgba(255, 0, 0, 0.02) 51px),
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 0, 0, 0.02) 50px, rgba(255, 0, 0, 0.02) 51px);
+            pointer-events: none;
         }
         
         .stories-container {
@@ -290,11 +362,11 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
         
         .story-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-12px) rotate(1deg);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
         
@@ -313,6 +385,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .story-card:hover .story-image img {
+            transform: scale(1.05);
         }
         
         .story-content {
@@ -336,6 +413,20 @@
         .instructor {
             padding: 100px 0; /* パディングを増やす */
             background-color: var(--light-gray);
+            position: relative;
+        }
+
+        .instructor::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 30%, rgba(255, 0, 0, 0.03) 0%, transparent 600px),
+                radial-gradient(circle at 90% 70%, rgba(255, 0, 0, 0.03) 0%, transparent 600px);
+            pointer-events: none;
         }
         
         .instructor-container {
@@ -345,6 +436,12 @@
             background-color: var(--white);
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .instructor-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
         
         .instructor-name {
@@ -387,6 +484,21 @@
         .bonuses {
             padding: 100px 0; /* パディングを増やす */
             background-color: #FFF9C4;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonuses::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 400px),
+                radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 400px);
+            pointer-events: none;
         }
         
         .bonus-cards {
@@ -406,6 +518,12 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             position: relative;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
         
         .bonus-label {
@@ -418,6 +536,11 @@
             transform: rotate(45deg);
             font-size: 0.9rem;
             font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+
+        .bonus-card:hover .bonus-label {
+            transform: rotate(45deg) translateX(-5px);
         }
         
         .bonus-title {
@@ -438,6 +561,22 @@
             padding: 100px 0; /* パディングを増やす */
             background: linear-gradient(135deg, var(--dark-gray) 0%, #555555 100%);
             color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paid-course::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
         }
         
         .course-features {
@@ -456,6 +595,12 @@
             min-width: 300px;
             padding: 35px; /* パディングを増やす */
             border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recommended-for:hover, .not-recommended-for:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .recommended-for {
@@ -505,26 +650,83 @@
             padding: 100px 0; /* パディングを増やす */
             text-align: center;
             background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.03) 0%, transparent 1000px);
+            pointer-events: none;
         }
         
         .schedule-details {
-            margin: 40px 0;
+            margin: 40px auto;
             padding: 30px; /* パディングを増やす */
             background-color: var(--white);
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             display: inline-block;
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .schedule-details:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
         
         .schedule-item {
             margin-bottom: 20px;
             font-weight: 500;
             font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
         }
         
         .schedule-icon {
             margin-right: 15px;
             color: var(--youtube-red);
+            flex-shrink: 0;
+        }
+        
+        .cta-button-container {
+            margin-top: 40px; /* ボタンの上の余白 */
+        }
+
+        .application-btn {
+            display: inline-block;
+            background-color: var(--youtube-red);
+            color: var(--white);
+            padding: 20px 50px; /* ボタンのパディングを増やす */
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-top: 10px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            border: 2px solid var(--youtube-red);
+        }
+        
+        .application-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4);
+        }
+
+        .application-btn:active {
+            transform: translateY(-2px);
         }
         
         .limited-seats {
@@ -538,6 +740,23 @@
         .faq {
             padding: 100px 0; /* パディングを増やす */
             background-color: var(--white);
+            position: relative;
+        }
+
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.02) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.02) 75%);
+            background-size: 30px 30px;
+            pointer-events: none;
         }
         
         .faq-container {
@@ -549,6 +768,11 @@
             margin-bottom: 30px;
             border-bottom: 1px solid #eee;
             padding-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(5px);
         }
         
         .faq-question {
@@ -574,6 +798,20 @@
         .testimonial {
             padding: 100px 0; /* パディングを増やす */
             background-color: var(--light-gray);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.03) 0%, transparent 500px),
+                radial-gradient(circle at 20% 80%, rgba(255, 0, 0, 0.03) 0%, transparent 500px);
+            pointer-events: none;
         }
         
         .testimonial-content {
@@ -593,6 +831,21 @@
             text-align: center;
             background: linear-gradient(135deg, var(--youtube-red) 0%, #CC0000 100%);
             color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.1) 0%, transparent 300px),
+                radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.1) 0%, transparent 300px);
+            pointer-events: none;
         }
         
         .footer-cta h3 {
@@ -701,6 +954,11 @@
             .solution-text {
                 font-size: 1rem;
             }
+
+            .application-btn {
+                padding: 15px 35px;
+                font-size: 1.2rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -762,6 +1020,12 @@
             .footer-cta p {
                 font-size: 1rem;
             }
+
+            .application-btn {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+                width: 100%;
+            }
         }
         
         /* Utilities */
@@ -775,6 +1039,10 @@
         
         .mb-40 {
             margin-bottom: 40px;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
         }
         
         /* Custom Effects */
@@ -813,6 +1081,26 @@
             font-size: 35px;
             margin-bottom: 15px;
             color: var(--youtube-red);
+        }
+
+        /* 新しい申し込みボタンのスタイル */
+        .application-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .application-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--youtube-red);
         }
     </style>
 </head>
@@ -1124,7 +1412,7 @@
     <!-- Registration Section -->
     <section id="registration" class="registration">
         <div class="container">
-            <h3 class="section-title animate-fade-in">無料相談会に申し込む</h3>
+            <h2 class="application-title animate-fade-in">無料相談会に申し込む</h2>
             
             <div class="schedule-details animate-fade-in delay-100">
                 <div class="schedule-item">
@@ -1153,7 +1441,9 @@
                 </div>
             </div>
             
-            <a href="#" class="cta-primary animate-fade-in delay-200">無料相談会に申し込む</a>
+            <div class="cta-button-container">
+                <a href="#" class="application-btn animate-fade-in delay-200">無料相談会に申し込む</a>
+            </div>
             
             <p class="limited-seats animate-fade-in delay-300">※予約は先着順です。定員になり次第締め切らせていただきます。</p>
         </div>
